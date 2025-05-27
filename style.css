@@ -1,0 +1,595 @@
+/* Variables CSS pour faciliter les changements de thème */
+:root {
+    --primary-color: #4CAF50; /* Vert engageant */
+    --primary-dark: #388E3C;
+    --secondary-color: #2196F3; /* Bleu pour les accents */
+    --text-color: #333;
+    --light-text-color: #666;
+    --background-color: #f9f9f9;
+    --card-bg: #fff;
+    --border-color: #eee;
+    --shadow-color: rgba(0, 0, 0, 0.08);
+    --font-family: 'Poppins', sans-serif;
+    --border-radius: 8px;
+    --transition-speed: 0.3s ease;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    scroll-behavior: smooth; /* Pour le défilement fluide des ancres */
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: #fff;
+    padding: 40px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* Pour les formes possibles en arrière-plan */
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml;utf8,<svg width="100%" height="100%" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="10" cy="10" r="5" fill="rgba(255,255,255,0.1)"/><circle cx="90" cy="30" r="8" fill="rgba(255,255,255,0.08)"/><circle cx="30" cy="70" r="6" fill="rgba(255,255,255,0.06)"/><circle cx="70" cy="90" r="7" fill="rgba(255,255,255,0.09)"/></svg>') no-repeat center center;
+    background-size: cover;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 1;
+    position: relative;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-speed), border-bottom var(--transition-speed);
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    background: #fff;
+    transition: width var(--transition-speed);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.hero-content {
+    padding: 80px 0 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+/* Boutons */
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.btn.primary {
+    background-color: #fff;
+    color: var(--primary-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn.primary:hover {
+    background-color: var(--secondary-color);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn.large {
+    padding: 18px 40px;
+    font-size: 1.2em;
+}
+
+
+
+/* --- Styles pour .intro-text (Version avec fond et bord) --- */
+.intro-text {
+    margin: 60px auto;
+    max-width: 1200px;
+    padding: 30px; /* Plus de padding interne avec un fond */
+    background-color: var(--card-bg); /* Ou une couleur très légèrement différente, ex: #fcfcfc */
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px var(--shadow-color); /* Une ombre douce */
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: var(--text-color);
+    border: 1px solid var(--border-color); /* Bordure subtile */
+}
+
+.intro-text strong {
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+/* Sections générales */
+.section {
+    padding: 80px 0;
+}
+
+.section.bg-light {
+    background-color: var(--background-color);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5em;
+    color: var(--primary-dark);
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-header h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    border-radius: 2px;
+}
+
+.section-header p {
+    font-size: 1.1em;
+    color: var(--light-text-color);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Grilles de contenu */
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.content-grid.reverse-order {
+    grid-template-columns: 1.4fr 0.8fr; /* Force 2 colonnes pour cette mise en page */
+    align-items: center;
+}
+
+.content-grid.reverse-order .text-content {
+    order: 1;
+}
+.content-grid.reverse-order .image-placeholder {
+    order: 2;
+}
+
+@media (max-width: 768px) {
+    .content-grid.reverse-order {
+        grid-template-columns: 1fr;
+    }
+    .content-grid.reverse-order .text-content,
+    .content-grid.reverse-order .image-placeholder {
+        order: unset; /* Annule l'ordre inversé sur mobile */
+    }
+}
+
+/* --- Styles pour le bloc d'exemple --- */
+.example-block {
+    background-color: #f0fdfe;/*var(--card-bg);*/ /* Utilise la couleur de fond des cartes (souvent blanc) */
+    border: 3px solid var(--border-color); /* Une bordure légère pour le délimiter */
+    border-radius: var(--border-radius); /* Bords arrondis */
+    padding: 30px; /* Espacement interne confortable */
+    margin: 60px auto; /* Marge au-dessus et en dessous, centré horizontalement */
+    max-width: 1200px; /* Limite la largeur pour une meilleure lisibilité */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07); /* Ombre douce */
+    line-height: 1.7; /* Améliore la lisibilité du texte */
+    color: var(--text-color);
+}
+
+.example-block p {
+    margin-bottom: 10px; /* Espace entre les paragraphes */
+	 font-style: italic;
+}
+
+.example-block h3 {
+    font-size: 1.8em; /* Taille du titre de l'exemple */
+	color: #e06d0e;
+    /*color: var(--primary-dark);  Couleur du titre */
+    margin-top: 0px; /* Espace au-dessus du titre */
+    margin-bottom: 20px; /* Espace en dessous du titre */
+    text-align: left; /* Aligne le titre à gauche */
+}
+
+.example-block ul {
+    list-style: none; /* Supprime les puces par défaut */
+    padding-left: 0; /* Supprime le padding par défaut des listes */
+}
+
+.example-block ul li {
+    margin-bottom: 15px; /* Espacement entre les éléments de liste */
+    position: relative; /* Pour positionner l'icône de puce personnalisée */
+    padding-left: 15px; /* Espace pour l'icône de puce */
+}
+
+.example-block ul li:last-child {
+    margin-bottom: 0; /* Pas de marge en bas du dernier élément */
+}
+
+/* Ajout d'une puce personnalisée pour les listes de l'exemple */
+.example-block ul li::before {
+    content: "\2022"; /* Caractère de puce ronde */
+    color: var(--secondary-color); /* Couleur bleue pour la puce */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -5px; /* Remonte la puce pour qu'elle soit à gauche */
+    position: absolute;
+    left: 0;
+}
+
+.example-block strong {
+    color: var(--primary-dark); /* Met en gras avec la couleur principale foncée */
+    font-weight: 700;
+}
+
+/* Style spécifique pour la "Résultat" dans l'exemple, pour la mettre en rouge */
+.example-block ul li strong:first-of-type { /* Cible le premier strong dans chaque li */
+    color: var(--primary-dark); /* Le "Résultat des votes" reste sombre */
+}
+
+.example-block ul li:first-child strong:last-of-type { /* Cible le "Résultat : Un film clivant" */
+    color: #dc3545; /* Rouge pour le résultat négatif */
+}
+
+/* --- Nouvelle classe pour mettre en relief des mots en orange --- */
+.text-accent-orange {
+    color: #fd7e14; /* Un orange vif pour l'accentuation */
+    font-weight: 700; /* Rendre le texte gras pour qu'il ressorte bien */
+    /* Vous pouvez ajouter d'autres propriétés si vous le souhaitez, par exemple: */
+    /* text-decoration: underline; */
+    /* background-color: rgba(253, 126, 20, 0.1); */ /* Un fond très léger */
+    /* padding: 2px 4px; */ /* Un peu de padding si vous ajoutez un fond */
+    /* border-radius: 3px; */
+}
+
+/* Cartes */
+.card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: 0 6px 20px var(--shadow-color);
+    text-align: center;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card i {
+    font-size: 3.5em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--light-text-color);
+}
+
+/* --- Styles pour les cartes de problème (orange) --- */
+.problem-card i {
+    color: #fd7e14; /* Orange vif pour les icônes */
+}
+
+.problem-card h3 {
+    color: #e06d0e; /* Un orange un peu plus foncé pour les titres */
+}
+
+.problem-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(253, 126, 20, 0.2); /* Ombre avec une teinte orange */
+}
+
+/* Spécifique pour les cartes mission */
+.mission-card i {
+    font-size: 3em;
+}
+
+/* Texte et listes */
+.text-content {
+    padding: 20px;
+}
+
+.text-content h3 {
+    font-size: 2em;
+    color: var(--primary-dark);
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    margin-bottom: 15px;
+    color: var(--light-text-color);
+}
+
+.text-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.text-content ul li {
+    margin-bottom: 10px;
+    color: var(--light-text-color);
+    display: flex;
+    align-items: center;
+}
+
+.text-content ul li i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.image-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px; /* Hauteur minimale pour que ce soit visible */
+}
+
+.image-placeholder img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 6px 20px var(--shadow-color);
+}
+
+.center-text {
+    text-align: center;
+}
+
+.mt-4 {
+    margin-top: 40px;
+}
+
+.role-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px 30px; /* Espace entre les éléments */
+    margin: 30px auto;
+    max-width: 800px;
+}
+
+.role-list li {
+    background-color: var(--card-bg);
+    padding: 12px 25px;
+    border-radius: 50px; /* Forme de pilule */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    font-weight: 600;
+    color: var(--primary-dark);
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+    display: flex;
+    align-items: center;
+}
+
+.role-list li i {
+    margin-right: 8px;
+    color: var(--secondary-color);
+    font-size: 1.1em;
+}
+
+.role-list li:hover {
+    transform: translateY(-5px);
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.role-list li:hover i {
+    color: #fff;
+}
+
+
+.cta-message {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: var(--primary-dark);
+    margin: 40px 0 30px;
+}
+
+.small-print {
+    font-size: 0.9em;
+    color: var(--light-text-color);
+    margin-top: 30px;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--text-color);
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 0.9em;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer i {
+    color: #e74c3c; /* Couleur rouge pour le cœur */
+    margin: 0 5px;
+}
+
+/* Media Queries pour la responsivité */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 2.8em;
+    }
+    .hero-content p {
+        font-size: 1.1em;
+    }
+    .section-header h2 {
+        font-size: 2em;
+    }
+    .content-grid.reverse-order {
+        grid-template-columns: 1fr;
+    }
+    .content-grid.reverse-order .text-content {
+        order: 2; /* Pour que le texte soit sous l'image sur mobile */
+    }
+    .content-grid.reverse-order .image-placeholder {
+        order: 1; /* Pour que l'image soit au-dessus du texte sur mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+    nav ul {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    nav ul li {
+        margin: 0 15px 10px;
+    }
+    .hero-content {
+        padding: 60px 0 30px;
+    }
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+    .section {
+        padding: 60px 0;
+    }
+    .section-header {
+        margin-bottom: 40px;
+    }
+    .section-header h2 {
+        font-size: 1.8em;
+    }
+    .card {
+        padding: 25px;
+    }
+    .text-content h3 {
+        font-size: 1.8em;
+    }
+    .btn.large {
+        padding: 15px 30px;
+        font-size: 1em;
+    }
+    .role-list {
+        gap: 10px 20px;
+        padding: 0 10px;
+    }
+    .role-list li {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+    .hero-content p {
+        font-size: 0.9em;
+    }
+    .section-header h2 {
+        font-size: 1.6em;
+    }
+    .card i {
+        font-size: 3em;
+    }
+    .card h3 {
+        font-size: 1.3em;
+    }
+}
