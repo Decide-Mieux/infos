@@ -1,4 +1,4 @@
-# Cahier des Charges Préliminaire : Application "Votons Mieux"
+# Cahier des Charges Préliminaire : Application "Décide Mieux"
 
 ## Introduction
 
@@ -7,7 +7,7 @@ Ce document présente les spécifications fonctionnelles et techniques initiales
 **Public Cible :** Associations, collectifs, petites entreprises, groupes d'amis, familles – toute entité souhaitant prendre des décisions de manière plus nuancée et éclairée.
 
 
-**Nom proposé (à débattre) :** Votons Mieux/ Jugement Éclairé / Vote Juste / Décide Mieux
+**Nom proposé (à débattre) :** Décide Mieux / Jugement Éclairé / Vote Juste / Décidons Mieux / Décidez mieux
 
 ---
 
