@@ -59,13 +59,13 @@ Pourtant, ce système, en apparence simple, est profondément imparfait et même
 		</div>
 <div class="example-block">
 
-    <h3>Exemple: Le Problème avec le "Vote Normal" (Vote Majoritaire)</h3>
+    <h3>Exemple: Le Problème avec le "Vote Habituel"</h3>
     <p>
         Imagine que toi et tes amis voulez choisir un film pour la soirée. Vous êtes 8 amis et choisissez parmi 3 films (A, B, C) au style similaire, que la plupart apprécient, et un dernier film D, très clivant : 3 l'aiment, les autres le détestent.
     </p>
 
 
-    <p>Si vous faites un <span class="text-accent-orange">"vote normal"</span> (celui où chacun dit juste son film préféré), voilà ce qui peut arriver :</p>
+    <p>Si vous faites un <span class="text-accent-orange">"vote habituel"</span> (celui où chacun dit juste son film préféré), voilà ce qui peut arriver :</p>
 
     <ul>
         <li>
@@ -110,9 +110,7 @@ Pourtant, ce système, en apparence simple, est profondément imparfait et même
 			   <p>En reprenant l'exemple précédent, imaginons que chacun donne un <strong>score de préférence</strong> entre 0 et 10 à chaque film (0 pour un film que l'on ne veut pas voit, 10 pour un film que l'on adore). 
 On peut par exemple obtenir le tableau suivant, où l'on voit que le film D est <strong>clivant</strong>, séparant les 5 premiers des 3 derniers amis de la liste.</p>
 			   <p>
-				   Ici, on a entouré les <strong>films préférés</strong> par chaque ami. A est bien préféré 2 fois, B une fois, C 2 fois, et D trois fois, ainsi le film remportant une élection classique serait le film D. 
-				   Pourtant, c'est le film qui reçoit la <strong>plus basse</strong> moyenne de score ainsi que la plus basse médiane ! C'est également le film qui totalise le plus grand cumul d'insatisfaction ! 
-				   (On mesure cela en additionnant les écarts entre la note attribuée et la note  la plus haute (10) sur tout le groupe)
+				   Ici, on a entouré les <strong>films préférés</strong> par chaque ami. A est bien préféré 2 fois, B une fois, C 2 fois, et D trois fois, comme dans l'exemple précédent. Ainsi,  selon le vote habituel, c'est bien le film D qui serait choisi. 
 			   </p>
 			   <div align="center">
 			    <table>
@@ -144,11 +142,18 @@ On peut par exemple obtenir le tableau suivant, où l'on voit que le film D est 
     </tfoot>
   </table><br>
 			   </div>
-			   <p>
-				   A l'inverse, on constate qu'ici, le film ayant la <strong>plus haute moyenne</strong> est le film C. Il serait plus normal que cela soit le film qui l'emporte ici. C'est aussi celui qui <strong>minimise l'insatisfaction cumulée</strong>.
+			    <p>				  
+				   Dans cet exemple, on constate que le film D reçoit la <strong>plus basse</strong> moyenne de score ainsi que la plus basse médiane ! C'est également le film qui totalise le plus grand cumul d'insatisfaction ! 
+				   (On mesure cela en additionnant les écarts entre la note attribuée et la note  la plus haute (10) sur tout le groupe)
 			   </p>
 			   <p>
-				   Le <strong>jugement majoritaire</strong> propose de choisir le film ayant la <strong>médiane</strong> la plus haute. La médiane est intéressante car elle est plus stable que la moyenne à des perturbations, en particuliers dans le cas d'un grand groupe. Elle peut mener à des ex-aequo comme ici, entre A et C. Le jugement majoritaire propose une règle pour les séparer également.
+				   A l'inverse, ici, le film ayant la <strong>plus haute moyenne</strong> est le film C. C'est aussi celui qui <strong>minimise l'insatisfaction cumulée</strong>. Il semblerait plus juste que ce soit le film qui l'emporte.
+			   </p>
+			  
+			
+			   <p>
+				   Le <strong>vote habituel</strong> propose de choisir le film D dans cette situation.
+				   Le <strong>jugement majoritaire</strong>, lui, propose de choisir le film ayant la <strong>médiane</strong> la plus haute. La médiane est intéressante car elle est plus stable que la moyenne à des perturbations, en particuliers dans le cas d'un grand groupe. Elle peut mener à des ex-aequo comme ici, entre A et C. Le jugement majoritaire propose une règle pour les séparer également.
 			   </p>
 		    </div>
 		    
