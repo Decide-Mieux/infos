@@ -110,8 +110,11 @@ Pourtant, ce système, en apparence simple, est profondément imparfait et même
 			   <p>En reprenant l'exemple précédent, imaginons que chacun donne un <strong>score de préférence</strong> entre 0 et 10 à chaque film (0 pour un film que l'on ne veut pas voit, 10 pour un film que l'on adore). 
 On peut par exemple obtenir le tableau suivant, où l'on voit que le film D est <strong>clivant</strong>, séparant les 5 premiers des 3 derniers amis de la liste.</p>
 			   <p>
-				   Ici, on a entouré les <strong>films préférés</strong>strong> par chaque ami. A est bien préféré 2 fois, B une fois, C 2 fois, et D trois fois, ainsi le film remportant une élection classique serait le film D. Pourtant, c'est le film qui reçoit la <strong>plus basse</strong> moyenne de score ainsi que la plus basse médiane !
+				   Ici, on a entouré les <strong>films préférés</strong> par chaque ami. A est bien préféré 2 fois, B une fois, C 2 fois, et D trois fois, ainsi le film remportant une élection classique serait le film D. 
+				   Pourtant, c'est le film qui reçoit la <strong>plus basse</strong> moyenne de score ainsi que la plus basse médiane ! C'est égalment le film qui totalise le plus grand cumul d'insatisfaction ! 
+				   (On mesure cela en additionnant les écarts entre la note attribuée et la note  la plus haute (10) sur tout le groupe)
 			   </p>
+			   <div align="center">
 			    <table>
     <thead>
       <tr>
@@ -137,8 +140,16 @@ On peut par exemple obtenir le tableau suivant, où l'on voit que le film D est 
     <tfoot>
       <tr><td>Moyenne</td><td>5,875</td><td>5,75</td><td>6,375</td><td>4,125</td></tr>
       <tr><td>Médiane</td><td>6,5</td><td>5,5</td><td>6,5</td><td>2,5</td></tr>
+      <tr><td>Insatisfaction cumulée</td><td>33</td><td>34</td><td>29</td><td>47</td></tr>
     </tfoot>
   </table>
+			   </div>
+			   <p>
+				   En revanche, le film ayant la plus haute moyenne est le film C. Il serait plus normal que cela soit le film qui l'emporte ici. C'est aussi celui qui minimise l'insatisfaction cumulée.
+			   </p>
+			   <p>
+				   Le jugement majoritaire propose de choisir le film ayant la médiane la plus haute. La médiane est intéressante car elle est plus stable que la moyenne à des perturbations, en particuliers dans le cas d'un grand groupe.
+			   </p>
 		    </div>
 		    
             </div>
