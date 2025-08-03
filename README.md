@@ -1,1 +1,1 @@
-Please check  [this page](https://decide-mieux.github.io/app/)
+Please check  [this page](https://decide-mieux.github.io/infos/)
